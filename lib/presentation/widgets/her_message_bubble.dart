@@ -15,6 +15,7 @@ class HerMessageBubble extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Text(
+              // como uso mi chatprovider para mostrar el texto aqui ?
               "Aqui tiene que venir algo",
               style: TextStyle(color: Colors.white),
             ),
