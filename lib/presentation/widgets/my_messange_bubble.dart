@@ -15,10 +15,10 @@ class MyMessageBubble extends StatelessWidget {
           decoration: BoxDecoration(
               color: colors.primary, borderRadius: BorderRadius.circular(20)),
           child:  Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            padding:const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Text(
               message.text,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           ),
         ),

@@ -7,8 +7,7 @@ class ChatProvider extends ChangeNotifier {
   final GetyesnoAnsewer getyesnoAnsewer = GetyesnoAnsewer();
 
   List<Message> messageList = [
-    Message(text: "Aqui tiene que venir algun mensaje", fromwho: FromWho.mine),
-    Message(text: "aqui algun otro mensaje ?", fromwho: FromWho.mine),
+    
   ];
 
   Future<void> sendMessage(String text) async {
@@ -30,10 +29,11 @@ class ChatProvider extends ChangeNotifier {
     moveScrollController();
   }
 
-  void moveScrollController() {
+  Future<void> moveScrollController() async {
+    await Future.delayed(Duration(milliseconds: 100));
     chatScrollController.animateTo(
         chatScrollController.position.maxScrollExtent,
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 200),
         curve: Curves.easeOut);
   }
 }
